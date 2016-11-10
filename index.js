@@ -4,9 +4,9 @@ $(document).ready(function(){
             type: "GET",
             url: "request.php",
             datatype: "html",
-            data: {q: "definition"},
+            data: {q: $("#word").val()},
             success: function(text){
-                alert(text)
+                $("#result").html(text)
             }
         });
     });
